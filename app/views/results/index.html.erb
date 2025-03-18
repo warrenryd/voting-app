@@ -1,0 +1,20 @@
+<div class="results index">
+  <h2>Voting Results</h2>
+
+
+  <table class="listing" summary="Voting list">
+    <tr class="header">
+      <th>Band Name</th>
+      <th>Total Votes</th>
+    </tr>
+    <% @results.each do |result| %>
+    <tr>
+      <td><%= result["band_name"] %></td>
+      <td><%= result["total_votes"] %></td>
+    </tr>
+    <% end %>
+  </table>
+
+  <%= button_to "I'm done", session_path, method: :delete, class: 'logout-button' %>
+
+</div>

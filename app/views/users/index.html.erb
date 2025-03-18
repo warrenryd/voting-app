@@ -1,0 +1,20 @@
+<div class="users index">
+  <h2>All registered users</h2>
+
+  <table class="listing" summary="User list">
+    <tr class="header">
+      <th>#</th>
+      <th>Email Address</th>
+      <th>Zipcode</th>
+      <th>Fav</th>
+    </tr>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.email_address %></td>
+      <td><%= user.zipcode %></td>
+      <td><%= user.band ? user.band.name : '--' %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,10 +1,38 @@
 # Voting app for interview exercises
 
-This Rails and React application is the starting point for our Voting app
-interview exercise. You may not need all the various files included to complete
-the assignment, but they are here in case they help you move faster! Please
-modify anything you need to in order to meet the requirements and show us your
-own approach.
+## My notes
+
+To start, follow the installation and running instructions below.
+But of course, you probably wrote this exercise, so you already knew that.
+Anyways...
+
+I had Ruby 3.4.1 and Rails 8 installed, so i went with those (updated Gemfile as such).
+
+I used the `rails generate authentication` script to set up the session scaffold,
+then undid the password verification part so it'd just take whatever email you put in.
+Seems to work.
+
+Once you sign in, you'll be redirected to the voting page.
+First time, you'll have to write in a band name. After that, you can write in or select a radio button of an exising band.
+Up to ten bands will be allowed - after that, you can only select an existing one.
+
+When you submit the vote, you'll be redirected to the results page.
+
+I did add a `I'm done` button on the results page, which logs you out.
+Seemed like the thing to do.
+
+If you sign in with an existing email, you can re-vote (changes your vote, doesn't add to it).
+I figured this was appropriate, cuz after all if you're at a music festival you're probably
+getting wasted and forgot you already voted. So, whatever...
+
+There's also a /users page so you can list all the users. Did that really for debugging,
+but it seems handy anyway.
+
+Once you're signed in, if you go back to home (`localhost:3000/`), you'll get a little greeting page
+reminding you of your email. Cuz you probably forgot, right?
+
+So, have fun. Drive home safe. Or take the bus. Or walk, cuz it's a great summer night
+and you want to savor the last moments of the music reverberating in your head....
 
 ## Installation
 

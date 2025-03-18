@@ -1,0 +1,25 @@
+<div class="bands index">
+  <h2>Cast your vote today!</h2>
+
+  <% if @bands.length > 0 %>
+    <div class="band-list">
+      <%= form_with model: @user do |form| %>
+        <%= form.collection_radio_buttons :band_id, Band.order(:name), :id, :name do |band| %>
+          <%= band.label { band.radio_button + " " + band.text } %><br/>
+          <% end %>
+        <%= form.submit value="Vote" %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @bands.length < 10 %>
+    <div class="band-entry">
+      <p><%= @bands.length > 0 ? "Or, add" : "Add" %> a new candidate:</p>
+      <%= form_with model: @band do |form| %>
+          <%= form.text_field :name, :placeholder => "Enter name..." %>
+        <%= form.submit value="Vote" %>
+      <% end %>
+    </div>
+  <% end %>
+
+</div>

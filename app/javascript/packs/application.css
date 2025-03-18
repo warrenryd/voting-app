@@ -5,3 +5,42 @@ body {
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
 }
+
+div.index, div.signin {
+  margin: 5em;
+}
+
+.signin input {
+  padding: 2px 0;
+  margin-bottom: .5em;
+}
+
+/*
+label {
+  margin: 1em 0; 
+  padding-top: 1em;
+}
+  */
+
+input[type="submit"] {
+  padding: 1em;
+  color: white;
+  background-color: black;
+}
+
+.band-list input[type="submit"] {
+  margin: 2em 0;
+}
+
+th, td {
+  padding: 0 1em;
+}
+
+button.logout-button {
+  padding: 1em;
+  margin-top: 2em;
+  margin-left: 1em;
+  color: white;
+  background-color: black;
+  
+}
